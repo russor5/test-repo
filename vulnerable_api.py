@@ -26,6 +26,10 @@ def search():
 #    print("/")
 #    return jsonify("OK")
 
+@app.route('/test')
+def test():
+    return jsonify("Test")
+
 #@app.route('/health')
 #def health_check():
 #    print("/health")

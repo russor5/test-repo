@@ -21,10 +21,12 @@ def search():
     conn.close()
     return jsonify(results)
 
+@app.route('/')
+def health():
+    return jsonify("OK")
 
 @app.route('/test')
 def test():
-
     return jsonify("results")
 
 if __name__ == '__main__':

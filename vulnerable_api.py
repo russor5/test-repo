@@ -25,9 +25,13 @@ def search():
 def health():
     return jsonify("OK")
 
+@app.route('/health')
+def health_check():
+    return jsonify({"status": "ok"})
+
 @app.route('/test')
 def test():
     return jsonify("results")
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, host='0.0.0.0', port=8080)
